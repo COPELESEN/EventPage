@@ -1,1 +1,1 @@
-# EventPage
+# eleven-resources
