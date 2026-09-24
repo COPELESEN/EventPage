@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Design for Learning in Universities</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a; /* Deep Blue */
+            --secondary: #4338ca; /* Indigo */
+            --accent: #f59e0b; /* Amber */
+            --bg-color: #f3f4f6; /* Light Gray */
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .course-container {
+            
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Hero Header */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 3rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #e0e7ff;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 3rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: #fffbeb;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
+            color: #92400e;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Session Cards */
+        .session-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .session-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2rem;
+            background: #fafafa;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .session-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            background: #ffffff;
+        }
+
+        .session-card h3 {
+            color: var(--secondary);
+            margin-top: 0;
+            font-size: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .session-time {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            background: #e5e7eb;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Activity Badges */
+        .activity-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 12px;
+            gap: 12px;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .badge.video { background: #fee2e2; color: #991b1b; }
+        .badge.quiz { background: #e0e7ff; color: #3730a3; }
+        .badge.discussion { background: #dcfce7; color: #166534; }
+        .badge.reading { background: #fef3c7; color: #92400e; }
+        .badge.activity { background: #f3e8ff; color: #6b21a8; }
+
+        .activity-text {
+            color: var(--text-main);
+            flex: 1;
+        }
+
+        .activity-text a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .activity-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .hero { padding: 3rem 1.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .session-card h3 { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .activity-item { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="course-container">
+        
+        <div class="hero">
+            <h1>Universal Design for Learning in Universities:<br>Advancing to Personalized Learning Excellence for All Students</h1>
+        </div>
+
+        <div class="content-section">
+            <div class="highlight-box">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Total: Around 5 - 8 hours (asynchronous online), flexible learning pacing.</span>
+            </div>
+
+            <div class="grid-2">
+                <div>
+                    <h2>🎯 Target Participants</h2>
+                    <ul>
+                        <li>UGC-funded university academic staff</li>
+                        <li>Teaching-track faculty</li>
+                        <li>Lecturers / Assistant Professors</li>
+                        <li>Programme leaders</li>
+                        <li>Instructional Designers</li>
+                        <li>SEN Support Team</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>💡 Intended Learning Outcomes</h2>
+                    <ul>
+                        <li>Explain why implementing UDL is important for personalizing learning experiences for university students.</li>
+                        <li>Apply the three principles and nine guidelines of UDL 3.0 in higher education contexts.</li>
+                        <li>Utilize Generative AI and accessibility technologies to enhance personalized learning.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>📚 Chapters</h2>
+            <div class="session-grid">
+                
+                <!-- Session 1 -->
+                <div class="session-card">
+                    <h3>Session 1: Learner Variability in Hong Kong Higher Education <span class="session-time">~50 mins</span></h3>
+                    <div class="activity-item">
+                        <span class="badge activity">Idea Jam</span>
+                        <span class="activity-text"><a href="https://padlet.com/teddl1/who-is-my-imagined-average-student-u7rk5ekz84uz2h4b" target="_blank">1.1 Who is my imagined ‘average’ student?</a></span> <span class="session-time">10 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge activity">Poll</span>
+                        <span class="activity-text"><a href="https://forms.gle/nmf6hzaHAjKJQQRV7" target="_blank">1.2 Would You Pass as the “Average” Student?</a></span><span class="session-time">5 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1206687033/6473a997e0" target="_blank">1.3 Myths of the “average student”</a></span><span class="session-time">~5 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge discussion">Discussion</span>
+                        <span class="activity-text"><a href="https://padlet.com/teddl1/what-factors-cause-students-to-learn-and-achieve-differently-lddxpj0nawd20slt" target="_blank">1.4 What factors cause students to learn and achieve differently in university settings?</a></span><span class="session-time">10 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1206687032/73452ac1f6" target="_blank">1.5 Diversity beyond SEN labels</a></span><span class="session-time">~9 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge discussion">Discussion</span>
+                        <span class="activity-text"><a href="https://padlet.com/teddl1/based-on-your-experience-or-observation-what-structural-fact-t1oh96ilprqkvqku" target="_blank">1.6 What structural factors hinder students’ learning and development?</a></span><span class="session-time">10 mins</span>
+                    </div>
+                </div>
+
+                <!-- Session 2 -->
+                <div class="session-card">
+                    <h3>Session 2: UDL 3.0 Framework Deep Dive (Compulsory) <span class="session-time">~130 mins</span></h3>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1206687034/fe65647284" target="_blank">2.0 Why UDL?</a></span><span class="session-time">~6 mins</span>
+                    </div>
+					<div style="border-top: 1px dashed #ccc; margin: 15px 0;"></div>
+				<!-- Session 2: Engagement-->
+                    <div class="activity-item">
+                        <span class="badge quiz">Quiz</span>
+                        <span class="activity-text"><a href="https://wayground.com/join?gc=43421721" target="_blank">2.1.0 Choose & Discover: Understanding What Holds Learners Back</a></span><span class="session-time">5 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1206687035/cede287679" target="_blank">2.1.1 UDL Considerations in Engagement</a></span><span class="session-time">~12 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge reading">Reading</span>
+                        <span class="activity-text"><a href="https://udlguidelines.cast.org/engagement/" target="_blank">2.1.2 UDL 3.0’s Guideline – Engagement</a></span><span class="session-time">10 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge discussion">Discussion</span>
+                        <span class="activity-text"><a href="https://padlet.com/teddl2/which-consideration-in-engagement-resonates-with-you-the-mos-qytoe3hey9h9xacx" target="_blank">2.1.3 Which consideration in Engagement resonates with you the most?</a></span><span class="session-time">15 mins</span>
+                    </div>
+                    <!-- Session 2: Representation-->
+                    <div style="border-top: 1px dashed #ccc; margin: 15px 0;"></div>
+
+                    <div class="activity-item">
+                        <span class="badge quiz">Quiz</span>
+                        <span class="activity-text"><a href="https://wayground.com/join?gc=04952089" target="_blank">2.2.0 Choose & Discover: See Your Course Through Every Student’s Eyes</a></span><span class="session-time">5 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1206687066/8078e2978d" target="_blank">2.2.1  UDL Considerations in Representation </a></span><span class="session-time">~11 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge reading">Reading</span>
+                        <span class="activity-text"><a href="https://udlguidelines.cast.org/representation/" target="_blank">2.2.2  UDL 3.0’s Guideline – Representation</a></span><span class="session-time">10 mins</span>
+                    </div>
+					<div class="activity-item">
+                        <span class="badge discussion">Discussion</span>
+                        <span class="activity-text"><a href="https://padlet.com/teddl2/which-consideration-in-representation-resonates-with-you-the-tnuj7lb7lq0urdyt" target="_blank">2.2.3  Which consideration in Representation resonates with you the most?</a></span><span class="session-time">15 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://youtube.com/playlist?list=PL0EKcmHAUV3LAT6467pQSaON858e-nx_s&si=6AlnXThfkPHft7Z8" target="_blank">2.2.4  Extra learning in improving learning accessibility (External Learning Resources)</a></span><span class="session-time">OPTIONAL</span>
+                    </div>
+					<!-- Session 2: Action and Expression-->
+                    <div style="border-top: 1px dashed #ccc; margin: 15px 0;"></div>
+
+                    <div class="activity-item">
+                        <span class="badge quiz">Quiz</span>
+                        <span class="activity-text"><a href="https://wayground.com/join?gc=20992025" target="_blank">2.3.0Choose & Discover: How Students can Truly Shine</a></span><span class="session-time">5 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1206687083/95031963fd" target="_blank">2.3.1 UDL Considerations in Action & Expression</a></span><span class="session-time">~11 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge reading">Reading</span>
+                        <span class="activity-text"><a href="https://udlguidelines.cast.org/action-expression/" target="_blank">2.3.2 UDL 3.0’s Guideline – Action & Expression</a></span><span class="session-time">10 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge discussion">Discuss</span>
+                        <span class="activity-text"><a href="https://padlet.com/teddl2/which-consideration-in-action-expression-resonates-with-you--pldjmoylsbz1lpcd" target="_blank">2.3.3 Which consideration in Action & Expression resonates with you the most?</a></span><span class="session-time">15 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://www.youtube.com/@CAST_UDL" target="_blank">2.3.4 Extra Official Learning Materials of UDL</a></span><span class="session-time">OPTIONAL</span>
+                    </div>
+                </div>
+
+                <!-- Session 3 -->
+                <div class="session-card">
+                    <h3>Session 3: Case Sharing <span class="session-time">~33 mins</span></h3>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1221694018/9404bd7a3c" target="_blank">3.1 UDL Case Sharing by Mr. Nelson Lo, Lecturer at a University in Australia</a></span><span class="session-time">15 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1206687086/22b74c122f" target="_blank">3.2 UDL Case Sharing by Mr. Calvin Lo, Lecturer at a Local University</a></span><span class="session-time">18 mins</span>
+                    </div>
+                </div>
+
+                <!-- Session 4 -->
+                <div class="session-card">
+                    <h3>Session 4: AI, EdTech and UDL <span class="session-time">~85 mins</span></h3>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://cityuhk-lms.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=4d4e95d2-2cb0-4c25-b462-b444007793a2" target="_blank">4.1 Transforming Personalized Learning with Google Gemini Notebook (formerly NotebookLM) </a></span><span class="session-time">~43 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1221694019/e70e3f00f5" target="_blank">4.2 Accessibility Tools: Hearing Impairment</a></span><span class="session-time">~14 mins</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1206687113/9f746b4c3d" target="_blank">4.3.1 Accessibility Tools: Visual Impairment</a></span><span class="session-time">~13 mins</span>
+						<span class="badge reading">Reading</span>
+                        <span class="activity-text"><a href="https://1drv.ms/b/c/41180a2550c78b16/IQDEt9ZH30VvQYTFI5ElosDCAUMSil2fKWo4Y8cKTuh9deo?e=mvjw7L" target="_blank">4.3.2 Limitations of These Accessibility Tools</a></span><span class="session-time">OPTIONAL</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="badge video">Video</span>
+                        <span class="activity-text"><a href="https://vimeo.com/1221694020/af690d7e05" target="_blank">4.4.1 Tools for Executive Functioning Difficulties</a></span><span class="session-time">~15 mins</span>
+						<span class="badge reading">Reading</span>
+                        <span class="activity-text"><a href="https://1drv.ms/b/c/41180a2550c78b16/IQAhOOlN25XPSbtQ3WV9ZM-zAcUMgJNVqaLUiLgX9_QWITA?e=xIg47c" target="_blank">4.4.2 List of the Tools</a></span><span class="session-time">OPTIONAL</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
